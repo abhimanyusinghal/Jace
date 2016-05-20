@@ -9,7 +9,7 @@ using Jace.Tests.Mocks;
 
 #if NETFX_CORE
 using Microsoft.VisualStudio.TestPlatform.UnitTestFramework;
-#elif __ANDROID__
+#elif __ANDROID__ || __IOS__ || __IOS__
 using NUnit.Framework;
 using TestClass = NUnit.Framework.TestFixtureAttribute;
 using TestMethod = NUnit.Framework.TestAttribute;

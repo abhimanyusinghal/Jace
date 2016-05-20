@@ -5,7 +5,7 @@ using System.Text;
 
 #if NETFX_CORE
 using Microsoft.VisualStudio.TestPlatform.UnitTestFramework;
-#elif __ANDROID__
+#elif __ANDROID__ || __IOS__
 using NUnit.Framework;
 #else
 using Microsoft.VisualStudio.TestTools.UnitTesting;
