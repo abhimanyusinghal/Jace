@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -26,7 +26,8 @@
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <Optimize>true</Optimize>
     <OutputPath>bin\Release</OutputPath>
-    <DefineConstants></DefineConstants>
+    <DefineConstants>
+    </DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <ConsolePause>false</ConsolePause>
@@ -44,7 +45,138 @@
     <Folder Include="Resources\" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="MyClass.cs" />
+    <Compile Include="..\Jace\AstBuilder.cs">
+      <Link>AstBuilder.cs</Link>
+    </Compile>
+    <Compile Include="..\Jace\CalculationEngine.cs">
+      <Link>CalculationEngine.cs</Link>
+    </Compile>
+    <Compile Include="..\Jace\DataType.cs">
+      <Link>DataType.cs</Link>
+    </Compile>
+    <Compile Include="..\jace\execution\ConstantInfo.cs">
+      <Link>Execution\ConstantInfo.cs</Link>
+    </Compile>
+    <Compile Include="..\jace\execution\ConstantRegistry.cs">
+      <Link>Execution\ConstantRegistry.cs</Link>
+    </Compile>
+    <Compile Include="..\jace\execution\DynamicCompiler.cs">
+      <Link>Execution\DynamicCompiler.cs</Link>
+    </Compile>
+    <Compile Include="..\jace\execution\ExecutionMode.cs">
+      <Link>Execution\ExecutionMode.cs</Link>
+    </Compile>
+    <Compile Include="..\jace\execution\FormulaBuilder.cs">
+      <Link>Execution\FormulaBuilder.cs</Link>
+    </Compile>
+    <Compile Include="..\jace\execution\FunctionInfo.cs">
+      <Link>Execution\FunctionInfo.cs</Link>
+    </Compile>
+    <Compile Include="..\jace\execution\FunctionRegistry.cs">
+      <Link>Execution\FunctionRegistry.cs</Link>
+    </Compile>
+    <Compile Include="..\jace\execution\IConstantRegistry.cs">
+      <Link>Execution\IConstantRegistry.cs</Link>
+    </Compile>
+    <Compile Include="..\jace\execution\IExecutor.cs">
+      <Link>Execution\IExecutor.cs</Link>
+    </Compile>
+    <Compile Include="..\jace\execution\IFunctionRegistry.cs">
+      <Link>Execution\IFunctionRegistry.cs</Link>
+    </Compile>
+    <Compile Include="..\jace\execution\Interpreter.cs">
+      <Link>Execution\Interpreter.cs</Link>
+    </Compile>
+    <Compile Include="..\jace\execution\ParameterInfo.cs">
+      <Link>Execution\ParameterInfo.cs</Link>
+    </Compile>
+    <Compile Include="..\Jace\FormulaContext.cs">
+      <Link>FormulaContext.cs</Link>
+    </Compile>
+    <Compile Include="..\jace\operations\Addition.cs">
+      <Link>Operations\Addition.cs</Link>
+    </Compile>
+    <Compile Include="..\jace\operations\Constant.cs">
+      <Link>Operations\Constant.cs</Link>
+    </Compile>
+    <Compile Include="..\jace\operations\Division.cs">
+      <Link>Operations\Division.cs</Link>
+    </Compile>
+    <Compile Include="..\jace\operations\Equal.cs">
+      <Link>Operations\Equal.cs</Link>
+    </Compile>
+    <Compile Include="..\jace\operations\Exponentiation.cs">
+      <Link>Operations\Exponentiation.cs</Link>
+    </Compile>
+    <Compile Include="..\jace\operations\Function.cs">
+      <Link>Operations\Function.cs</Link>
+    </Compile>
+    <Compile Include="..\jace\operations\GreaterOrEqualThan.cs">
+      <Link>Operations\GreaterOrEqualThan.cs</Link>
+    </Compile>
+    <Compile Include="..\jace\operations\GreaterThan.cs">
+      <Link>Operations\GreaterThan.cs</Link>
+    </Compile>
+    <Compile Include="..\jace\operations\LessOrEqualThan.cs">
+      <Link>Operations\LessOrEqualThan.cs</Link>
+    </Compile>
+    <Compile Include="..\jace\operations\LessThan.cs">
+      <Link>Operations\LessThan.cs</Link>
+    </Compile>
+    <Compile Include="..\jace\operations\Modulo.cs">
+      <Link>Operations\Modulo.cs</Link>
+    </Compile>
+    <Compile Include="..\jace\operations\Multiplication.cs">
+      <Link>Operations\Multiplication.cs</Link>
+    </Compile>
+    <Compile Include="..\jace\operations\NotEqual.cs">
+      <Link>Operations\NotEqual.cs</Link>
+    </Compile>
+    <Compile Include="..\jace\operations\Operation.cs">
+      <Link>Operations\Operation.cs</Link>
+    </Compile>
+    <Compile Include="..\jace\operations\Subtraction.cs">
+      <Link>Operations\Subtraction.cs</Link>
+    </Compile>
+    <Compile Include="..\jace\operations\UnaryMinus.cs">
+      <Link>Operations\UnaryMinus.cs</Link>
+    </Compile>
+    <Compile Include="..\jace\operations\Variable.cs">
+      <Link>Operations\Variable.cs</Link>
+    </Compile>
+    <Compile Include="..\Jace\Optimizer.cs">
+      <Link>Optimizer.cs</Link>
+    </Compile>
+    <Compile Include="..\Jace\ParseException.cs">
+      <Link>ParseException.cs</Link>
+    </Compile>
+    <Compile Include="..\jace\tokenizer\Token.cs">
+      <Link>Tokenizer\Token.cs</Link>
+    </Compile>
+    <Compile Include="..\jace\tokenizer\TokenReader.cs">
+      <Link>Tokenizer\TokenReader.cs</Link>
+    </Compile>
+    <Compile Include="..\jace\tokenizer\TokenType.cs">
+      <Link>Tokenizer\TokenType.cs</Link>
+    </Compile>
+    <Compile Include="..\jace\util\EngineUtil.cs">
+      <Link>Util\EngineUtil.cs</Link>
+    </Compile>
+    <Compile Include="..\jace\util\FuncAdapter.cs">
+      <Link>Util\FuncAdapter.cs</Link>
+    </Compile>
+    <Compile Include="..\jace\util\MathUtil.cs">
+      <Link>Util\MathUtil.cs</Link>
+    </Compile>
+    <Compile Include="..\jace\util\MemoryCache.cs">
+      <Link>Util\MemoryCache.cs</Link>
+    </Compile>
+    <Compile Include="..\jace\util\TypeExtensions.cs">
+      <Link>Util\TypeExtensions.cs</Link>
+    </Compile>
+    <Compile Include="..\Jace\VariableNotDefinedException.cs">
+      <Link>VariableNotDefinedException.cs</Link>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
